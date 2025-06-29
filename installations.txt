@@ -4,6 +4,9 @@ Qué es: Explorador de archivos de KDE Plasma (GUI).
 dunst:
 Qué es: Servidor de notificaciones ligero para X11/Wayland.
 
+wlogout:
+Que es: Administrador para cerrar sesion, reiniciar pc, etc
+
 grim:
 Qué es: Herramienta de captura de pantalla para Wayland (como scrot en X11).
 
@@ -65,4 +68,3 @@ Qué es: un ide al igual que vscode
 
 mpv:
 Qué es: un reproductor de video ligero
-

@@ -1,0 +1,17 @@
+# Permite cortar, copiar y pegar con combinaciones modernas
+unbind ^K all
+unbind ^C all
+
+# Asignar funciones nuevas con teclas alternativas
+bind ^K exit all              # Ctrl+K para salir
+bind M-C copy all             # Ctrl+Shift+C para copiar
+bind M-X cut all              # Ctrl+Shift+X para cortar
+bind M-V paste all            # Ctrl+Shift+V para pegar
+bind M-C cancel all           # Ctrl+Shift+C también sirve como cancelación
+
+# Opcionales
+set mouse
+set linenumbers
+set softwrap
+set tabsize 4
+

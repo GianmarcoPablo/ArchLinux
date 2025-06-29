@@ -1,0 +1,68 @@
+dolphin:
+Qué es: Explorador de archivos de KDE Plasma (GUI).
+
+dunst:
+Qué es: Servidor de notificaciones ligero para X11/Wayland.
+
+grim:
+Qué es: Herramienta de captura de pantalla para Wayland (como scrot en X11).
+
+htop:
+Qué es: Monitor de procesos interactivo en la terminal.
+
+kitty:
+Qué es: Emulador de terminal moderno con soporte para GPU.
+
+hyprland:
+Qué es: Compositor dinámico para Wayland, similar a un gestor de ventanas.
+
+iwd:
+Qué es: Intel Wireless Daemon. Maneja conexiones Wi-Fi desde terminal.
+
+openssh:
+Qué es: Implementación de SSH para conectar de forma segura a otros equipos vía terminal.
+
+nano:
+Qué es: Editor de texto en la terminal, sencillo de usar.
+
+polkit-kde-agent:
+Qué es: Agente gráfico de autenticación para acciones administrativas (cuando un programa necesita permisos).
+
+qt5-wayland / qt6-wayland:
+Qué es: Permite que aplicaciones hechas con Qt5/Qt6 funcionen correctamente bajo Wayland.
+
+slurp:
+Qué es: Seleccionador de área para capturas de pantalla, usado junto con grim.
+
+smartmontools:
+Qué es: Utilidad para monitorear el estado de salud del disco (SMART).
+
+uwsm:
+Qué es: Hyprland-specific, ayuda con compatibilidad entre apps X11 y Wayland.
+
+vim:
+Qué es: Editor de texto avanzado en terminal.
+
+wget:
+Qué es: Herramienta para descargar archivos desde la web por terminal.
+
+wireless_tools:
+Qué es: Conjunto de herramientas antiguas para redes inalámbricas (ahora en desuso frente a iwd o NetworkManager).
+
+wofi:
+Qué es: Lanzador de aplicaciones (menú tipo Rofi) compatible con Wayland.
+
+xdg-desktop-portal-hyprland:
+
+xdg-utils:
+Qué es: Conjunto de herramientas para abrir URLs, archivos, manejar MIME, etc.
+
+wpa_supplicant:
+Qué es: Servicio que maneja autenticación Wi-Fi y configuración de red.
+
+zed:
+Qué es: un ide al igual que vscode
+
+mpv:
+Qué es: un reproductor de video ligero
+

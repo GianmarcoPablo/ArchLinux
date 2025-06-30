@@ -46,5 +46,3 @@ Esto debería activar el modo oscuro a nivel "system theme" (por ejemplo, Zed, B
 ✅  4. POR ULTIMO:
 hacemos esto para que se ejecute ni bien arrancar en hyprland.conf y reiniciamos
 exec-once = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
-probando un nuevo push

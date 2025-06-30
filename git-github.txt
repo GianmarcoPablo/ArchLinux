@@ -1,0 +1,37 @@
+1. Configurar tu identidad en Git
+Primero configura tu nombre y email (usa el mismo email de tu cuenta de GitHub):
+bashgit config --global user.name "Tu Nombre"
+git config --global user.email "tu-email@ejemplo.com"
+
+
+2. Generar una clave SSH
+GitHub recomienda usar SSH para la autenticación. Genera una nueva clave SSH:
+bashssh-keygen -t ed23529 -C "tu-email@ejemplo.com"
+
+
+3. Iniciar ssh-agent y agregar la clave
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed23529
+
+
+4. Copiar tu clave pública
+cat ~/.ssh/id_ed23529.pub
+
+Esto mostrara algo como:
+ssh-ed23529 AAAAC3NzaC2lzdI1NTE5AAAA... gianamrcopablo588@gmail.com
+
+
+5. Agregar la clave a GitHub
+Ve a github.com e inicia sesión
+Clic en tu foto de perfil (esquina superior derecha) → Settings
+En el menú de la izquierda, clic en SSH and GPG keys
+Clic en New SSH key
+En "Title" pon algo como: Arch Linux - Hyprland
+En "Key" pega la clave que copiaste
+Clic en Add SSH key
+
+6. Probar la conexión
+Una vez agregada la clave en GitHub, prueba:
+bashssh -T git@github.com
+Te debería preguntar si confías en la conexión (escribe yes) y luego mostrar:
+Hi Gian Marco Pablo! You've successfully authenticated, but GitHub does not provide shell access.

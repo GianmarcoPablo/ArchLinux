@@ -1,0 +1,48 @@
+
+✅ 1. Configura el tema oscuro para GTK/QT
+nano ~/.config/gtk-3.0/settings.ini
+
+Para GTK 4, crea también (si no existe):
+nano ~/.config/gtk-4.0/settings.ini
+
+dentro de esos dos archivos ponemos el :
+
+[Settings]
+gtk-theme-name=Adwaita-dark
+gtk-application-prefer-dark-theme=true
+
+
+✅ 2. Forzar Qt a usar tema oscuro
+Crea o edita:
+
+nano ~/.config/qt5ct/qt5ct.conf
+
+dentro de ese archivo:
+[Appearance]
+color_scheme_path=/usr/share/qt5ct/colors/Adwaita Dark.conf
+
+
+si no esta instalado qt5ct:
+sudo pacman -S qt5ct
+
+Y en tu ~/.bashrc o ~/.zshrc (o el archivo que cargue Hyprland), agrega:
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+
+✅ 3. Activar tema oscuro para aplicaciones basadas en sistema (Brave, Zed, etc.)
+Estas apps detectan el tema vía xdg-desktop-portal + dconf.
+
+Paso A: Instala lo necesario
+sudo pacman -S dconf xdg-desktop-portal xdg-desktop-portal-hyprland
+
+
+Paso B: Configura modo oscuro con dconf
+Puedes usar dconf-editor (GUI), o desde terminal así:
+
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+Esto debería activar el modo oscuro a nivel "system theme" (por ejemplo, Zed, Brave y apps de Electron lo respetan).
+
+
+✅  4. POR ULTIMO:
+hacemos esto para que se ejecute ni bien arrancar en hyprland.conf y reiniciamos
+exec-once = gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'

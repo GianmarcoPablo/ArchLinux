@@ -1,0 +1,10 @@
+sudo pacman -S grim slurp wl-clipboard
+
+comando para hyprland:
+bind = CTRL, Print, exec, sh -c 'grim -g "$(slurp)" - | wl-copy'
+
+
+explicacion:
+1.slurp → muestra el área para seleccionar.
+2.grim -g "$(slurp)" - → toma una captura de esa región.
+3.| wl-copy → la redirige al portapapeles.

@@ -1,0 +1,14 @@
+isntall swww : sudo pacman -S swww
+
+to be persistent:
+
+in the following file: .config/hypr/hyprland.conf:
+
+exec-once = swww-daemon
+exec-once = swww img /mnt/datos/images/wallpapers/waifu-1.jpg
+
+para probar manualmente:
+
+ejecuta:
+swww-daemon &
+swww img "ruta"

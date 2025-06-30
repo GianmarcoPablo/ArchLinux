@@ -1,0 +1,20 @@
+en hyprland.conf
+
+input {
+  numlock_by_default = true
+}
+
+en el sddm:
+
+1. instalamos
+sudo pacman -S numlockx
+
+2. abriomos el archivo para modificar
+sudo nano /etc/sddm.conf
+
+3. en el archivo instalamos:
+[General]
+Numlock=on
+
+4. reboot para probar
+sudo systemctl restart sddm

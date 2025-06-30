@@ -1,0 +1,53 @@
+verificar el sistema de archivos del disco:
+
+1.lsblk -f
+
+2.Ejemplo de lo visto:
+NAME   FSTYPE LABEL UUID                                 MOUNTPOINT
+sda2   ext4         xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx /
+sdb1   ntfs         xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+3.Creamos un punto de montaje
+sudo mkdir -p /mnt/datos
+
+4. Montarlo manualmente para probar
+sudo mount /dev/sdb1 /mnt/datos
+
+5.Revisa que funcione:
+ls /mnt/datos
+
+6.crea im archivo de prueba:
+touch /mnt/datos/funciona.txt
+
+7. si el archivo se crea correctamente , eliminalo por que ya no es necesario
+rm funciona.txt
+
+8. edita el archivo y agrega al finaL:
+sudo nano /etc/fstab
+
+agrega: ojo essto debe ser de lo qeu te dio lsblk -f
+UUID=0bdf8000-ba4d-47c2-85f1-b8e2b0f20cbf   /mnt/datos   ext4   defaults   0   2
+
+9. verificamos que este bien:
+sudo umount /mnt/datos
+sudo mount -a
+
+5. (Opcional) Cambia el dueño del directorio para evitar usar sudo
+Ahora mismo /mnt/datos pertenece a root, así que si quieres que tú puedas escribir ahí sin usar sudo, haz:
+
+sudo chown -R $USER:$USER /mnt/datos
+
+----------------AHORA CREAREMOS UN ALIAS-------------------------
+
+1. VAMOS A SI USAMOS BASH
+nano ~/.bashrc
+
+SI USARMOS ZSH:
+nano ~/.zshrc
+
+2. AGREGAMOS AL FINAL:
+
+alias dev='cd /mnt/datos'
+
+3. GUARDAMOS Y SALIMOS
+source ~/.bashrc      # o ~/.zshrc si usas zsh
